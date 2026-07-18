@@ -204,26 +204,6 @@ Network traffic analysis is one of the most powerful skills in the SOC analyst t
 
 ---
 
-## Repository Structure
-
-text
-network-traffic-analysis-wireshark-lab/
-├── README.md
-└── screenshots/
-    ├── 01_wireshark_version.png
-    ├── 02_malware_traffic_analysis_site.png
-    ├── 03_exercise_background.png
-    ├── 04_pcap_loaded_overview.png
-    ├── 05_c2_traffic_filtered.png
-    ├── 06_tcp_syn_http_post_details.png
-    ├── 07_dhcp_packets_analysis.png
-    ├── 08_hostname_mac_discovered.png
-    ├── 09_dns_traffic_analysis.png
-    ├── 10_tcp_conversations.png
-    └── 11_ipv4_conversations.png
-
----
-
 ## Conclusion
 
 This lab demonstrates a complete network traffic analysis workflow using Wireshark on a real malicious PCAP. NetSupport Manager RAT C2 communication was confirmed, the infected host was identified via DHCP analysis, and a full IOC set was produced. MITRE ATT&CK techniques were mapped and a remediation plan was delivered. This mirrors the exact process a SOC Tier 1 or Tier 2 analyst follows when analysing suspicious network traffic flagged by a SIEM alert.
