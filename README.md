@@ -33,7 +33,7 @@ A SIEM alert flagged signature hits for NetSupport Manager RAT communicating wit
 
 ### 1. PCAP Loaded Initial Overview
 
-![Wireshark PCAP Loaded]()
+[![](<Screenshots/pcap loaded initial overview.png>)](<Screenshots/pcap loaded initial overview.png>)
 
 - Loaded PCAP file `2026-02-28-traffic-analysis-exercise.pcap.zip` into Wireshark
 - Total packets: 15,512 across the capture window
@@ -51,7 +51,7 @@ A SIEM alert flagged signature hits for NetSupport Manager RAT communicating wit
 
 ### 2. C2 Traffic Filtered ip.addr == 45.131.214.85
 
-![C2 Traffic Filtered]()
+[![C2 traffic filtered](<Screenshots/C2 traffic filtered.png>)](<Screenshots/C2 traffic filtered.png>)
 
 - Applied display filter `ip.addr == 45.131.214.85`
 - 550 packets displayed (3.5% of total capture)
@@ -69,7 +69,9 @@ A SIEM alert flagged signature hits for NetSupport Manager RAT communicating wit
 
 ### 3. Packet Detail Analysis TCP SYN to C2
 
-![HTTP POST Details]()
+[![TCP SYN to C2 Analysis](<Screenshots/Deep packet analysis .png>)](<Screenshots/Deep packet analysis .png>)
+
+[![](<Screenshots/tcp syn http post.png>)](<Screenshots/tcp syn http post.png>)
 
 - Examined packet 2569 TCP SYN from `10.2.28.88` to `45.131.214.85:443`
 - Source MAC confirmed: `00:19:d1:b2:4d:ad` (Intel NIC)
@@ -86,9 +88,9 @@ A SIEM alert flagged signature hits for NetSupport Manager RAT communicating wit
 
 ### 4. DHCP Host Analysis Identification 
 
-![DHCP Packets]()
+[![DHCP Packets](<Screenshots/dhcp host analysis 1.png>)](<Screenshots/dhcp host analysis 1.png>)
 
-![Hostname Discovered]()
+[![](<Screenshots/dhcp packet analysis 2.png>)](<Screenshots/dhcp packet analysis 2.png>)
 
 - Applied display filter `dhcp` 4 DHCP packets displayed
 - Expanded DHCP Discover packet Option (12) Host Name revealed
@@ -106,9 +108,9 @@ A SIEM alert flagged signature hits for NetSupport Manager RAT communicating wit
 
 ### 5. DNS Traffic Analysis
 
-![DNS Traffic]()
+[![](<Screenshots/DNS Traffic.png>)](<Screenshots/DNS Traffic.png>)
 
-![VirusTotal url investigation]()
+[![](<Screenshots/VirusTotal url.png>)](<Screenshots/VirusTotal url.png>)
 
 - Applied display filter `dns`
 - Identified the infected host sending DNS queries to C2 server
@@ -127,11 +129,9 @@ A SIEM alert flagged signature hits for NetSupport Manager RAT communicating wit
 
 ### 6. Network Conversation Statistics
 
-![TCP Conversations]()
+[![Conversation statistics](<Screenshots/Network conversation  statistics.png>)](<Screenshots/Network conversation  statistics.png>)
 
-![IPv4 Conversations]()
-
-![External IP VirusTotal Investigation]()
+[![VirusTotal external IP](<Screenshots/VirustTotal external IP.png>)](<Screenshots/VirustTotal external IP.png>)
 
 - Opened Statistics → Conversations → TCP tab
 - Identified 352 TCP conversations and 219 UDP conversations
