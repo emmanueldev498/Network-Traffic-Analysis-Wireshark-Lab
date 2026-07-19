@@ -20,7 +20,7 @@ A SIEM alert flagged signature hits for NetSupport Manager RAT communicating wit
 - **Hostname:** DESKTOP-TEYQ2NR
 - **Internal IP:** 10.2.28.88
 - **MAC Address:** 00:19:d1:b2:4d:ad
-- **User:** DESKTOP-TEYQ2NR
+- **User:** brolf
 - **LAN Segment:** 10.2.28.0/24
 - **Domain:** easyas123.tech
 - **AD Environment:** EASYAS123
@@ -123,7 +123,7 @@ A SIEM alert flagged signature hits for NetSupport Manager RAT communicating wit
 - DNS queries reveal all domains the infected host attempted to contact
 - Investigated C2 domain (`vadusa.xyz`) on VirusTotal and it was found to be a malicious url 
 - Malware often queries multiple domains for redundancy check all external queries
-- Legitimate looking domains can be used for C2 always cross reference with VirusTotal
+- Legitimate looking domains can be used for C2; always cross-reference with VirusTotal
 
 ---
 
@@ -155,7 +155,7 @@ A SIEM alert flagged signature hits for NetSupport Manager RAT communicating wit
 | Infected Hostname | DESKTOP-TEYQ2NR | ❌ Compromised Isolate immediately |
 | Infected MAC | 00:19:d1:b2:4d:ad | ❌ Compromised device |
 | C2 IP | 45.131.214.85 | ❌ Malicious RAT C2 server |
-| C2 URI | `http://45.131.214.85/fakeurl.htm`| ❌ NetSupport RAT callback URI |
+| C2 URL | `http://45.131.214.85/fakeurl.htm`| ❌ NetSupport RAT callback URI |
 |Protocol|CMD=POLL / CMD=ENCD over cleartext HTTP on TCP/443 | ⚠️ Evasion HTTP over HTTPS port |
 | User-Agent | NetSupport Manager/1.3| ⚠️ C2 server agent |
 |Server Head | NetSupport Gateway/1.92 (Windows NT)| ⚠️ C2 server head |
@@ -179,7 +179,7 @@ A SIEM alert flagged signature hits for NetSupport Manager RAT communicating wit
 - Infected host `DESKTOP-TEYQ2NR` isolated from network immediately
 - C2 IP `45.131.214.85` blocked at perimeter firewall
 - URI `/fakeurl.htm` blocked at web proxy
-- `DESKTOP-TEYQ2NR notified device submitted for forensic investigation
+- `DESKTOP-TEYQ2NR device should be submitted for forensic investigation
 - SIEM rule updated to alert on future connections to `45.131.214.85`
 - Ticket escalated to Tier 2 for full endpoint forensic analysis
 
